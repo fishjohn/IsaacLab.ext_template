@@ -1,4 +1,4 @@
-"""Installation script for the 'orbit.ext_template' python package."""
+"""Installation script for the 'IsaacLab.ext_template' python package."""
 
 import os
 import toml
@@ -20,8 +20,8 @@ INSTALL_REQUIRES = [
 setup(
     # TODO: Change your package naming
     # -----------------------------------------------------------------
-    name="orbit.ext_template",
-    packages=["orbit.ext_template"],
+    name="IsaacLab.ext_template",
+    packages=["IsaacLab.ext_template"],
     # -----------------------------------------------------------------
     author=EXTENSION_TOML_DATA["package"]["author"],
     maintainer=EXTENSION_TOML_DATA["package"]["maintainer"],
@@ -37,7 +37,7 @@ setup(
     classifiers=[
         "Natural Language :: English",
         "Programming Language :: Python :: 3.10",
-        "Isaac Sim :: 2023.1.0-hotfix.1",
+        "Isaac Sim :: 4.0.0",
         "Isaac Sim :: 2023.1.1",
     ],
     zip_safe=False,

@@ -4,20 +4,20 @@ import os
 import toml
 
 # Conveniences to other module directories via relative paths
-ORBIT_TASKS_EXT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../"))
+ISAACLAB_TASKS_EXT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../"))
 """Path to the extension source directory."""
 
-ORBIT_TASKS_METADATA = toml.load(os.path.join(ORBIT_TASKS_EXT_DIR, "config", "extension.toml"))
+ISAACLAB_TASKS_METADATA = toml.load(os.path.join(ISAACLAB_TASKS_EXT_DIR, "config", "extension.toml"))
 """Extension metadata dictionary parsed from the extension.toml file."""
 
 # Configure the module-level variables
-__version__ = ORBIT_TASKS_METADATA["package"]["version"]
+__version__ = ISAACLAB_TASKS_METADATA["package"]["version"]
 
 ##
 # Register Gym environments.
 ##
 
-from omni.isaac.orbit_tasks.utils import import_packages
+from omni.isaac.lab_tasks.utils import import_packages
 
 # The blacklist is used to prevent importing configs from sub-packages
 _BLACKLIST_PKGS = ["utils"]

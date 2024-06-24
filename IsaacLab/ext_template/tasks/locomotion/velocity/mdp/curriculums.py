@@ -1,6 +1,6 @@
 """Common functions that can be used to create curriculum for the learning environment.
 
-The functions can be passed to the :class:`omni.isaac.orbit.managers.CurriculumTermCfg` object to enable
+The functions can be passed to the :class:`omni.isaac.lab.managers.CurriculumTermCfg` object to enable
 the curriculum introduced by the function.
 """
 
@@ -10,16 +10,16 @@ import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
 
-from omni.isaac.orbit.assets import Articulation
-from omni.isaac.orbit.managers import SceneEntityCfg
-from omni.isaac.orbit.terrains import TerrainImporter
+from omni.isaac.lab.assets import Articulation
+from omni.isaac.lab.managers import SceneEntityCfg
+from omni.isaac.lab.terrains import TerrainImporter
 
 if TYPE_CHECKING:
-    from omni.isaac.orbit.envs import RLTaskEnv
+    from omni.isaac.lab.envs import ManagerBasedRLEnv
 
 
 def terrain_levels_vel(
-    env: RLTaskEnv, env_ids: Sequence[int], asset_cfg: SceneEntityCfg = SceneEntityCfg("robot")
+    env: ManagerBasedRLEnv, env_ids: Sequence[int], asset_cfg: SceneEntityCfg = SceneEntityCfg("robot")
 ) -> torch.Tensor:
     """Curriculum based on the distance the robot walked when commanded to move at a desired velocity.
 
@@ -28,7 +28,7 @@ def terrain_levels_vel(
 
     .. note::
         It is only possible to use this term with the terrain type ``generator``. For further information
-        on different terrain types, check the :class:`omni.isaac.orbit.terrains.TerrainImporter` class.
+        on different terrain types, check the :class:`omni.isaac.lab.terrains.TerrainImporter` class.
 
     Returns:
         The mean terrain level for the given environment ids.

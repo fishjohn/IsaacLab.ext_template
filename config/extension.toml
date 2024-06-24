@@ -4,33 +4,33 @@
 version = "0.1.0"
 
 # Description
-category = "orbit"
+category = "IsaacLab"
 readme  = "README.md"
 
 # TODO: Change your package specifications
 # -----------------------------------------------------------------
 title = "Extension Template"
-author = "ORBIT Project Developers"
+author = "Isaac Lab  Project Developers"
 maintainer = "Nico Burger"
 maintainer_email = "nburger@theaiinstitute.com"
-description="Extension Template for Orbit"
-repository = "https://github.com/isaac-orbit/orbit.ext_template.git"
-keywords = ["extension", "template", "orbit"]
+description="Extension Template for IsaacLab"
+repository = "https://github.com/fishjohn/IsaacLab.ext_template"
+keywords = ["extension", "template", "IsaacLab"]
 # -----------------------------------------------------------------
 
 [dependencies]
-"omni.isaac.orbit" = {}
-"omni.isaac.orbit_assets" = {}
-"omni.isaac.orbit_tasks" = {}
+"omni.isaac.lab" = {}
+"omni.isaac.lab_assets" = {}
+"omni.isaac.lab_tasks" = {}
 # NOTE: Add additional dependencies here
 
 [[python.module]]
 # TODO: Change your package name
 # -----------------------------------------------------------------
-name = "orbit.ext_template"
+name = "IsaacLab.ext_template"
 # -----------------------------------------------------------------
 
-[orbit_settings]
+[IsaacLab_settings]
 # TODO: Uncomment and list any apt dependencies here.
 #       If none, leave it commented out.
 # apt_deps = ["example_package"]
