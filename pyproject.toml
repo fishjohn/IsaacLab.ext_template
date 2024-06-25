@@ -8,15 +8,16 @@ atomic = true
 profile = "black"
 line_length = 120
 py_version = 310
-skip_glob = ["docs/*", "logs/*", "_orbit/*", "_isaac_sim/*"]
+skip_glob = ["docs/*", "logs/*", "_isaac_sim/*", ".vscode/*"]
 group_by_package = true
 
 sections = [
     "FUTURE",
     "STDLIB",
     "THIRDPARTY",
-    "ORBITPARTY",
+    "ASSETS_FIRSTPARTY",
     "FIRSTPARTY",
+    "EXTRA_FIRSTPARTY",
     "LOCALFOLDER",
 ]
 extra_standard_library = [
@@ -46,14 +47,14 @@ known_thirdparty = [
     "warp",
     "carb",
 ]
-known_orbitparty = [
-    "omni.isaac.orbit",
-    "omni.isaac.orbit_tasks",
-    "omni.isaac.orbit_assets"
+known_isaaclabparty = [
+    "omni.isaac.lab",
+    "omni.isaac.lab_tasks",
+    "omni.isaac.lab_assets"
 ]
 
 # Modify the following to include the package names of your first-party code
-known_firstparty = "orbit.ext_template"
+known_firstparty = "IsaacLab.ext_template"
 known_local_folder = "config"
 
 [tool.pyright]
@@ -61,7 +62,6 @@ known_local_folder = "config"
 exclude = [
     "**/__pycache__",
     "**/_isaac_sim",
-    "**/_orbit",
     "**/docs",
     "**/logs",
     ".git",
